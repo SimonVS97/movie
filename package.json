@@ -2,7 +2,7 @@
   "name": "movie",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/SimonVS97/movie#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
     "lodash": "^4.17.21"
   }
 }
