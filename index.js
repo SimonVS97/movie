@@ -1,32 +1,64 @@
 const express = require('express');
 const app = express();
 
-let topBooks = [
+let topMovies = [
   {
-    title: 'Harry Potter and the Sorcerer\'s Stone',
-    author: 'J.K. Rowling'
+    title: 'In Bruges',
+    year: '2008'
   },
   {
-    title: 'Lord of the Rings',
-    author: 'J.R.R. Tolkien'
+    title: 'The Godfather I',
+    year: '1972'
   },
   {
-    title: 'Twilight',
-    author: 'Stephanie Meyer'
+    title: 'The Godfather II',
+    year: '1974'
+  },
+  {
+    title: '7 Psychos',
+    year: '2012'
+  },
+  {
+    title: '12 Angry men',
+    year: '1957'
+  },
+  {
+    title: 'Pulp Fiction',
+    year: '1994'
+  },
+  {
+    title: 'Vertigo',
+    year: '1958'
+  },
+  {
+    title: 'Psycho',
+    year: '1960'
+  },
+  {
+    title: 'Das Boot',
+    year: '1981'
+  },
+  {
+    title: 'Berlin Calling',
+    year: '2008'
   }
+
 ];
 
 // GET requests
+
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
-  res.send('Welcome to my book club!');
+  res.send('Welcome to my movie club!');
 });
 
 app.get('/documentation', (req, res) => {                  
   res.sendFile('/documentation.html', { root: __dirname });
 });
 
-app.get('/books', (req, res) => {
-  res.json(topBooks);
+app.get('/movies', (req, res) => {
+  res.json(topMovies);
 });
 
 
