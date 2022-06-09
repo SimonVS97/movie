@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 
 let topMovies = [
@@ -45,17 +46,22 @@ let topMovies = [
 
 ];
 
-// GET requests
+// Middleware
 
 app.use(express.static('public'));
+app.use(morgan('common'));
+
+
+// GET requests
+
 
 app.get('/', (req, res) => {
   res.send('Welcome to my movie club!');
 });
 
-app.get('/documentation', (req, res) => {                  
+/*app.get('/documentation', (req, res) => {                  
   res.sendFile('/documentation.html', { root: __dirname });
-});
+});*/
 
 app.get('/movies', (req, res) => {
   res.json(topMovies);
