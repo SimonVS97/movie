@@ -61,5 +61,79 @@
         </tr>
       </tbody>
     </table>
+
+    <br>
+    <h2>/movies</h2>
+    <p>Get request</p>
+    <p>Returns a json file with data on all movies</p>
+    <p>No data in request body necessary</p>
+    <p>Response body format: JSON</p>
+    <p>Query parameters: movies</p>
+    <br>
+
+    <h2>/movies/:title</h2>
+    <p>Get request</p>
+    <p>Returns a json file with data on a specific movie</p>
+    <p>No data in request body necessary</p>
+    <p>Response body format: JSON</p>
+    <p>Query parameters: movies, title</p>
+    <br>
+
+    <h2>/genre/:name</h2>
+    <p>Get request</p>
+    <p>Returns a json file with data on a specific genre</p>
+    <p>No data in request body necessary</p>
+    <p>Response body format: JSON</p>
+    <p>Query parameters: genres, name</p>
+    <br>
+
+    <h2>/directors/:name</h2>
+    <p>Get request</p>
+    <p>Returns a json file with data on a specific director</p>
+    <p>No data in request body necessary</p>
+    <p>Response body format: JSON</p>
+    <p>Query parameters: directors, name</p>
+    <br>
+
+    <h2>/user/newuser</h2>
+    <p>PUT request</p>
+    <p>Sends a message that a new user has registered sucessfully</p>
+    <p>JSON file with user data</p>
+    <p>Response body format: plain text</p>
+    <p>Query parameters: user, newuser</p>
+    <br>
+
+    <h2>/user/:name</h2>
+    <p>POST request</p>
+    <p>Sends a message that a has updated his/her name</p>
+    <p>JSON file with old name und new name</p>
+    <p>Response body format: plain text</p>
+    <p>Query parameters: user, name</p>
+    <br>
+
+    <h2>/user/:name/favoritelist</h2>
+    <p>PUT request</p>
+    <p>Sends a message that new movie has been added to favoritelist</p>
+    <p>JSON file with movie data</p>
+    <p>Response body format: plain text</p>
+    <p>Query parameters: user, name, favoritelist</p>
+    <br>
+
+    <h2>/user/:name/favoritelist/:moviename</h2>
+    <p>DELETE request</p>
+    <p>Sends a message that new movie has been deleted from the  favoritelist</p>
+    <p>no request body necessary</p>
+    <p>Response body format: plain text</p>
+    <p>Query parameters: user, name, favoritelist, moviename</p>
+    <br>
+
+    <h2>/user/:name</h2>
+    <p>DELETE request</p>
+    <p>Sends a message that the user has successfully deregestired</p>
+    <p>no request body necessary</p>
+    <p>Response body format: plain text</p>
+    <p>Query parameters: user, name</p>
+    <br>
+
   </body>
 </html>
