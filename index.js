@@ -73,7 +73,7 @@ app.get('/movies/:title', (req, res) => {
   let title = req.params.title;
 
   res.json(topMovies.find((movie) => {
-    return movie.name === title;
+    return movie.title === title;
   }));
 
 });
@@ -85,7 +85,7 @@ app.get('/genre/:name', (req,res) => {
 
 // Get data about a director by name
 app.get('/directors/:name', (req,res) => {
-  res.send('Successful GET request returns data on a specific genre.');
+  res.send('Successful GET request returns data on a specific director.');
 });
 
 // Allow new user to register
