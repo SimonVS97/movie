@@ -4,6 +4,62 @@
 
   </head>
   <body>
-    <h1>Heyho</h1>
+    <h1>Documentation: Movie API</h1>
+    <table>
+      <th>
+        <tr>
+          <td>Request</td>
+          <td>URL</td>
+          <td>Response</td>
+        </tr>
+      </th>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/movies</td>
+          <td>A list of all movies</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/movies/:title</td>
+          <td>Data on a single movie</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/genre/:name</td>
+          <td>Data about a genre by name/title</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/directors/:name</td>
+          <td>Data about a director by name</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>http://localhost:8080/user/newuser</td>
+          <td>Register new user</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>http://localhost:8080/user/:name</td>
+          <td>update username</td>
+        </tr>
+        <tr>
+          <td>PUT</td>
+          <td>http://localhost:8080/user/:name/favoritelist</td>
+          <td>add a movie</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>http://localhost:8080/user/:name/favoritelist/:moviename</td>
+          <td>delete a movie</td>
+        </tr>
+        <tr>
+          <td>DELETE</td>
+          <td>http://localhost:8080/user/:name</td>
+          <td>delete a user</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
