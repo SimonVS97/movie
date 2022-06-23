@@ -17,123 +17,68 @@
         <tr>
           <td>GET</td>
           <td>http://localhost:8080/movies</td>
-          <td>A list of all movies</td>
+          <td>This request does not need a body. It returns a list of all movies in a JSON format.</td>
         </tr>
         <tr>
           <td>GET</td>
           <td>http://localhost:8080/movies/:title</td>
-          <td>Data on a single movie</td>
+          <td>This request requires the title of a movie as a parameter. It returns information on the movie in a JSON format. </td>
         </tr>
         <tr>
           <td>GET</td>
           <td>http://localhost:8080/genre/:name</td>
-          <td>Data about a genre by name/title</td>
+          <td>This request requires the name of the genre as a parameter. It returns the information on the genre in a JSON format.</td>
         </tr>
         <tr>
           <td>GET</td>
           <td>http://localhost:8080/directors/:name</td>
-          <td>Data about a director by name</td>
+          <td>This request requires the name of the director as a parameter. It returns the information on the director in a JSON format./td>
         </tr>
         <tr>
-          <td>PUT</td>
-          <td>http://localhost:8080/user/newuser</td>
-          <td>Register new user</td>
+          <td>GET</td>
+          <td>http://localhost:8080/users</td>
+          <td>This request does not need a body. It returns information on all users.</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>http://localhost:8080/users/:Username</td>
+          <td>This request requires the name of a user as a parameter. It returns the information on that user in a JSON format.</td>
         </tr>
         <tr>
           <td>POST</td>
-          <td>http://localhost:8080/user/:name</td>
-          <td>update username</td>
+          <td>http://localhost:8080/users</td>
+          <td>This request requires a body that contains the information for the new user in a JSON format. <br> 
+              It creates a new user in the database. It returns the information of the newly created user in a JSON format.
+          </td>
         </tr>
         <tr>
           <td>PUT</td>
-          <td>http://localhost:8080/user/:name/favoritelist</td>
-          <td>add a movie</td>
+          <td>http://localhost:8080/user/:Username</td>
+          <td>This request requires a body that contains the information that is supposed to replace the existing information of the user. <br>
+              It updates the information of the user in the database. It returns the updated information of the user in a JSON format.    
+          </td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>http://localhost:8080/users/:Username/movies/:MovieID</td>
+          <td>This request requires a body that contains information on the specific user. In addition, the movie is required as a parameter. <br>
+              It adda a movie to the favorite list of the user. It will return the data of the user in a JSON format.
+          </td>
         </tr>
         <tr>
           <td>DELETE</td>
-          <td>http://localhost:8080/user/:name/favoritelist/:moviename</td>
-          <td>delete a movie</td>
+          <td>http://localhost:8080/users/:Username/movies/:MovieID</td>
+          <td>This request requires the name of the user and the movie to be deleted from his favorite list as parameters. <br>
+              It deletes a movie from the favorite list. It reutrns the updated information of the user in a JSON format.
+          </td>
         </tr>
         <tr>
           <td>DELETE</td>
-          <td>http://localhost:8080/user/:name</td>
-          <td>delete a user</td>
+          <td>http://localhost:8080/users/:Username</td>
+          <td>This request requires the name of the user as a parameter. It deletes the user from the database. It returns a message.</td>
         </tr>
       </tbody>
     </table>
-
-    <br>
-    <h2>/movies</h2>
-    <p>Get request</p>
-    <p>Returns a json file with data on all movies</p>
-    <p>No data in request body necessary</p>
-    <p>Response body format: JSON</p>
-    <p>Query parameters: movies</p>
-    <br>
-
-    <h2>/movies/:title</h2>
-    <p>Get request</p>
-    <p>Returns a json file with data on a specific movie</p>
-    <p>No data in request body necessary</p>
-    <p>Response body format: JSON</p>
-    <p>Query parameters: movies, title</p>
-    <br>
-
-    <h2>/genre/:name</h2>
-    <p>Get request</p>
-    <p>Returns a json file with data on a specific genre</p>
-    <p>No data in request body necessary</p>
-    <p>Response body format: JSON</p>
-    <p>Query parameters: genres, name</p>
-    <br>
-
-    <h2>/directors/:name</h2>
-    <p>Get request</p>
-    <p>Returns a json file with data on a specific director</p>
-    <p>No data in request body necessary</p>
-    <p>Response body format: JSON</p>
-    <p>Query parameters: directors, name</p>
-    <br>
-
-    <h2>/user/newuser</h2>
-    <p>PUT request</p>
-    <p>Sends a message that a new user has registered sucessfully</p>
-    <p>JSON file with user data</p>
-    <p>Response body format: plain text</p>
-    <p>Query parameters: user, newuser</p>
-    <br>
-
-    <h2>/user/:name</h2>
-    <p>POST request</p>
-    <p>Sends a message that a has updated his/her name</p>
-    <p>JSON file with old name und new name</p>
-    <p>Response body format: plain text</p>
-    <p>Query parameters: user, name</p>
-    <br>
-
-    <h2>/user/:name/favoritelist</h2>
-    <p>PUT request</p>
-    <p>Sends a message that new movie has been added to favoritelist</p>
-    <p>JSON file with movie data</p>
-    <p>Response body format: plain text</p>
-    <p>Query parameters: user, name, favoritelist</p>
-    <br>
-
-    <h2>/user/:name/favoritelist/:moviename</h2>
-    <p>DELETE request</p>
-    <p>Sends a message that new movie has been deleted from the  favoritelist</p>
-    <p>no request body necessary</p>
-    <p>Response body format: plain text</p>
-    <p>Query parameters: user, name, favoritelist, moviename</p>
-    <br>
-
-    <h2>/user/:name</h2>
-    <p>DELETE request</p>
-    <p>Sends a message that the user has successfully deregestired</p>
-    <p>no request body necessary</p>
-    <p>Response body format: plain text</p>
-    <p>Query parameters: user, name</p>
-    <br>
 
   </body>
 </html>
