@@ -16,65 +16,65 @@
       <tbody>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/movies</td>
+          <td>https://movie-app-svs.herokuapp.com/movies</td>
           <td>This request does not need a body. It returns a list of all movies in a JSON format.</td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/movies/:title</td>
+          <td>https://movie-app-svs.herokuapp.com/movies/:title</td>
           <td>This request requires the title of a movie as a parameter. It returns information on the movie in a JSON format. </td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/genre/:name</td>
+          <td>https://movie-app-svs.herokuapp.com/genre/:name</td>
           <td>This request requires the name of the genre as a parameter. It returns the information on the genre in a JSON format.</td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/directors/:name</td>
+          <td>https://movie-app-svs.herokuapp.com/directors/:name</td>
           <td>This request requires the name of the director as a parameter. It returns the information on the director in a JSON format./td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/users</td>
+          <td>https://movie-app-svs.herokuapp.com/users</td>
           <td>This request does not need a body. It returns information on all users.</td>
         </tr>
         <tr>
           <td>GET</td>
-          <td>http://localhost:8080/users/:Username</td>
+          <td>https://movie-app-svs.herokuapp.com/users/:Username</td>
           <td>This request requires the name of a user as a parameter. It returns the information on that user in a JSON format.</td>
         </tr>
         <tr>
           <td>POST</td>
-          <td>http://localhost:8080/users</td>
+          <td>https://movie-app-svs.herokuapp.com/users</td>
           <td>This request requires a body that contains the information for the new user in a JSON format. <br> 
               It creates a new user in the database. It returns the information of the newly created user in a JSON format.
           </td>
         </tr>
         <tr>
           <td>PUT</td>
-          <td>http://localhost:8080/user/:Username</td>
+          <td>https://movie-app-svs.herokuapp.com/user/:Username</td>
           <td>This request requires a body that contains the information that is supposed to replace the existing information of the user. <br>
               It updates the information of the user in the database. It returns the updated information of the user in a JSON format.    
           </td>
         </tr>
         <tr>
           <td>POST</td>
-          <td>http://localhost:8080/users/:Username/movies/:MovieID</td>
+          <td>https://movie-app-svs.herokuapp.com/users/:Username/movies/:MovieID</td>
           <td>This request requires a body that contains information on the specific user. In addition, the movie is required as a parameter. <br>
               It adda a movie to the favorite list of the user. It will return the data of the user in a JSON format.
           </td>
         </tr>
         <tr>
           <td>DELETE</td>
-          <td>http://localhost:8080/users/:Username/movies/:MovieID</td>
+          <td>https://movie-app-svs.herokuapp.com/users/:Username/movies/:MovieID</td>
           <td>This request requires the name of the user and the movie to be deleted from his favorite list as parameters. <br>
               It deletes a movie from the favorite list. It reutrns the updated information of the user in a JSON format.
           </td>
         </tr>
         <tr>
           <td>DELETE</td>
-          <td>http://localhost:8080/users/:Username</td>
+          <td>https://movie-app-svs.herokuapp.com/users/:Username</td>
           <td>This request requires the name of the user as a parameter. It deletes the user from the database. It returns a message.</td>
         </tr>
       </tbody>
