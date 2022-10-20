@@ -29,3 +29,6 @@ Please read the documentation for information on the endpoints.
 * passport: "^0.6.0",
 * passport-jwt: "^4.0.0",
 * passport-local: "^1.0.0"
+
+## Endpoints
+Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
