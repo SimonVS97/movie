@@ -27,9 +27,14 @@ This project was created with:
 * passport-local: "^1.0.0"
 
 ## How to user the server
-The server runs on this [URL](https://movie-app-svs.herokuapp.com/)
+The server runs on this [URL](https://movie-app-svs.herokuapp.com/). <br/>
 You can send your requests to this server with Postman.
 Please read the documentation for information on the endpoints.
 
 ## Endpoints
 Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
+
+## Author
+Simon Victor Schubert
+
+[Check out my LinkedIn](https://www.linkedin.com/in/simon-schubert/)
