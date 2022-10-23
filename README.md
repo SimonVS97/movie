@@ -1,16 +1,12 @@
-# movie
+# movieAPI
  
-## Project Description
+## Description
 This is a web server that stores information about users and movies in a database and edits the database based on http requests.
-Users an be created, their information read and updated and deleted.
-The movies that are stored in the database can be added to the favorite list of a user.
+Users an be created, their information read, updated and deleted.
+The movies that are stored in the database can be added to the favorite list of a user. The server also implements authentication and authorization of the user.
 
-## How to get the project running
-The server runs on this URL. https://movie-app-svs.herokuapp.com/
-You can send your requests to this server with Postman.
-Please read the documentation for information on the endpoints.
-
-## Tech Stack
+## Technologies
+This project was created with:
 * Node.js
 * Express
 * MongoDB
@@ -29,6 +25,11 @@ Please read the documentation for information on the endpoints.
 * passport: "^0.6.0",
 * passport-jwt: "^4.0.0",
 * passport-local: "^1.0.0"
+
+## How to user the server
+The server runs on this [URL](https://movie-app-svs.herokuapp.com/)
+You can send your requests to this server with Postman.
+Please read the documentation for information on the endpoints.
 
 ## Endpoints
 Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
