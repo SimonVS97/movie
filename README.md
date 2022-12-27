@@ -33,12 +33,24 @@ Please read the documentation for information on the endpoints.
 
 ## Endpoints
 
-## Endpoints
-
 ### Get data of all movies
 Endpoint: ```/movies```
+
 HTTP method: GET
+
 Request body data format: none
+
+Response body data format: JSON object holding data about all movies, see below for format
+
+### Get data of a single movie
+Endpoint: ```/movies/:title```
+
+HTTP method: GET
+
+URL Params required: title = title of movie, string
+
+Request body data format: none
+
 Response body data format: JSON object holding data about a movie containing description, genre, director, image URL
 ```
 {
@@ -51,16 +63,32 @@ Response body data format: JSON object holding data about a movie containing des
     Director: {
       Name: String,
       Bio: String,
-      Birth: Date, ("YYYY-MM-DD")
-      Death: Date ("YYYY-MM-DD")
+      Birth: Date, ("YYYY")
+      Death: Date ("YYYY")
       },
       ImagePath: String,
       Featured: Boolean
 }
 ```
 
-### Get data of a single movie
 ### Get data of a genre
+Endpoint: ```/genre/:name```
+
+HTTP method: GET
+
+URL Params required: name = name of genre, string
+
+Request body data format: none
+
+Response body data format: JSON object holding data about a genre
+
+```
+{
+  Name: String,
+  Description: String
+}
+```
+
 ### Get data of a director
 ### Post a new user
 ### Get data of a single user
