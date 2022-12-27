@@ -151,12 +151,71 @@ Response body data format: JSON object holding the data about the user
 ````
 
 ### Update user data
-Endpoint: /users/:Username
+Endpoint: ```/users/:Username```
 
+HTTP method: PUT
 
+Request body data format: JSON object with the new user infos
+```
+{
+  "Username": String, (required)
+  "Password": String, (required)
+  "Email": String, (required)
+  "Birthday": Date ("YYYY-MM-DD")
+}
+```
+Response body data format: JSON object holding the data about the new user
+
+```
+{
+  "_id":
+  "Username": String, (required)
+  "Password": String, (required)
+  "Email": String, (required)
+  "Birthday": Date, ("YYYY-MM-DD")
+  "FavoriteMovies": []
+}
+```
 
 ### Add movie to favorite list of user
-### Remove movie from facorite list of user
+Endpoint: ```/users/:Username/movies/:MovieID````
+
+HTTP method: PUT
+
+Request body data format: none
+
+Response body data format: JSON object holding the new data about the user
+```
+{
+  "_id":
+  "Username": String, (required)
+  "Password": String, (required)
+  "Email": String, (required)
+  "Birthday": Date, ("YYYY-MM-DD")
+  "FavoriteMovies": [...]
+}
+```
+
+### Remove movie from favorite list of user
+Endpoint: ```/users/:Username/movies/:MovieID```
+
+HTTP method: DELETE
+
+Request body data format: none
+
+Response body data format: JSON object holding the data about the user without the deleted movie
+
+```
+{
+  "_id":
+  "Username": String, (required)
+  "Password": String, (required)
+  "Email": String, (required)
+  "Birthday": Date, ("YYYY-MM-DD")
+  "FavoriteMovies": [...]
+}
+```
+
 ### Delete user
 
 
