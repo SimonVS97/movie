@@ -132,7 +132,7 @@ Response body data format: JSON object holding data about the new user
 
 ### Get data of a single user
 
-Endpoint: /users/:Username
+Endpoint: ```/users/:Username```
 
 HTTP method: GET
 
@@ -151,13 +151,13 @@ Response body data format: JSON object holding the data about the user
 ````
 
 ### Update user data
+Endpoint: /users/:Username
+
+
+
 ### Add movie to favorite list of user
 ### Remove movie from facorite list of user
 ### Delete user
-
-
-
-
 
 
 Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
