@@ -32,6 +32,48 @@ You can send your requests to this server with Postman.
 Please read the documentation for information on the endpoints.
 
 ## Endpoints
+
+## Endpoints
+
+### Get data of all movies
+Endpoint: ```/movies```
+HTTP method: GET
+Request body data format: none
+Response body data format: JSON object holding data about a movie containing description, genre, director, image URL
+```
+{
+  Title: String, (required)
+  Description: String, (required)
+  Genre: {
+    Name: String,
+    Description: String
+    },
+    Director: {
+      Name: String,
+      Bio: String,
+      Birth: Date, ("YYYY-MM-DD")
+      Death: Date ("YYYY-MM-DD")
+      },
+      ImagePath: String,
+      Featured: Boolean
+}
+```
+
+### Get data of a single movie
+### Get data of a genre
+### Get data of a director
+### Post a new user
+### Get data of a single user
+### Update user data
+### Add movie to favorite list of user
+### Remove movie from facorite list of user
+### Delete user
+
+
+
+
+
+
 Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
 
 ## Author
