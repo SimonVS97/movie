@@ -114,11 +114,42 @@ Request body data format: JSON object holding data about the new user including 
   Username: String, (required)
   Password: String, (required)
   Email: String, (required)
-  Birthday: Date, ("YYYY-MM-DD")
+  Birthday: Date
 }
 ````
 
+Response body data format: JSON object holding data about the new user
+```
+{
+    "Username": String,
+    "Password": String,
+    "Email": String,
+    "Birthday": Date,
+    "FavoriteMovies": [],
+    "_id": String
+}
+```
+
 ### Get data of a single user
+
+Endpoint: /users/:Username
+
+HTTP method: GET
+
+Request body data format: none
+
+Response body data format: JSON object holding the data about the user
+```
+{
+    "_id": String,
+    "Username": String,
+    "Password": String,
+    "Email": String,
+    "Birthday": Date,
+    "FavoriteMovies": []
+}
+````
+
 ### Update user data
 ### Add movie to favorite list of user
 ### Remove movie from facorite list of user
