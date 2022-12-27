@@ -178,7 +178,7 @@ Response body data format: JSON object holding the data about the new user
 ```
 
 ### Add movie to favorite list of user
-Endpoint: ```/users/:Username/movies/:MovieID````
+Endpoint: ```/users/:Username/movies/:MovieID```
 
 HTTP method: PUT
 
