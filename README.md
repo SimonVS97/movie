@@ -80,17 +80,44 @@ URL Params required: name = name of genre, string
 
 Request body data format: none
 
-Response body data format: JSON object holding data about a genre
+Response body data format: string holding data on a genre
 
 ```
-{
-  Name: String,
-  Description: String
-}
+"Description"
 ```
 
 ### Get data of a director
+Endpoint: ```/directors/:name```
+
+HTTP method: GET
+
+Request body data format: none
+
+Response body data format: JSON object holding data about a director including bio, birth year, death year
+```
+{
+  Name: String,
+  Bio: String,
+  Birth: Date, ("YYYY")
+  Death: Date ("YYYY")
+}
+```
+
 ### Post a new user
+Endpoint: ```/users```
+
+HTTP method: POST
+
+Request body data format: JSON object holding data about the new user including username and email
+```
+{
+  Username: String, (required)
+  Password: String, (required)
+  Email: String, (required)
+  Birthday: Date, ("YYYY-MM-DD")
+}
+````
+
 ### Get data of a single user
 ### Update user data
 ### Add movie to favorite list of user
