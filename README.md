@@ -217,6 +217,13 @@ Response body data format: JSON object holding the data about the user without t
 ```
 
 ### Delete user
+Endpoint: ```/users/:Username```
+
+HTTP method: DELETE
+
+Request body data format: none
+
+Response body data format: Text message indicating that the user email was removed
 
 
 Please take a look at the [jsdocs](https://github.com/SimonVS97/movie/tree/main/out)
