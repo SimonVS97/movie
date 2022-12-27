@@ -91,6 +91,9 @@ Endpoint: ```/directors/:name```
 
 HTTP method: GET
 
+URL Params required: name = name of director, string
+
+
 Request body data format: none
 
 Response body data format: JSON object holding data about a director including bio, birth year, death year
@@ -136,6 +139,8 @@ Endpoint: ```/users/:Username```
 
 HTTP method: GET
 
+URL Params required: Username = name of user, string
+
 Request body data format: none
 
 Response body data format: JSON object holding the data about the user
@@ -154,6 +159,8 @@ Response body data format: JSON object holding the data about the user
 Endpoint: ```/users/:Username```
 
 HTTP method: PUT
+
+URL Params required: Username = name of user, string
 
 Request body data format: JSON object with the new user infos
 ```
@@ -180,6 +187,9 @@ Response body data format: JSON object holding the data about the new user
 ### Add movie to favorite list of user
 Endpoint: ```/users/:Username/movies/:MovieID```
 
+URL Params required: Username = name of genre, string
+                     MovieID = id of movie, string
+
 HTTP method: PUT
 
 Request body data format: none
@@ -201,6 +211,9 @@ Endpoint: ```/users/:Username/movies/:MovieID```
 
 HTTP method: DELETE
 
+URL Params required: Username = name of genre, string
+                     MovieID = id of movie, string
+
 Request body data format: none
 
 Response body data format: JSON object holding the data about the user without the deleted movie
@@ -220,6 +233,8 @@ Response body data format: JSON object holding the data about the user without t
 Endpoint: ```/users/:Username```
 
 HTTP method: DELETE
+
+URL Params required: Username = name of genre, string
 
 Request body data format: none
 
